@@ -40,3 +40,11 @@ fi
 
 confirm "Install xorg and xorg-xinit?" && sudo pacman -Sy xorg xorg-xinit
 
+if confirm "Install acpi to view your battery status?"; then
+    echo -e "\e[32mInstalling acpi\e[0m"
+    sudo pacman -Sy acpi
+    if confirm "Create alias 'battery' for acpi in your .bashrc?"; then
+        echo -e "\e[32mCreating alias 'battery' for acpi\e[0m"
+        echo 'alias battery="acpi"' | sudo tee -a ~/.bashrc >> /dev/null
+    fi
+fi
