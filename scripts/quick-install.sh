@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -eq 0 ]; then
+    echo -e "\e[31mDo not execute this as root\e[0m"
+    exit 1
+fi
+
 confirm() {
     read -r -p "${1:-Are you sure?} [y/N] " response
     case "$response" in
