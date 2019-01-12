@@ -12,9 +12,9 @@ confirm() {
     esac
 }
 
-if confirm "Install base packages (vim base-devel go mlocate wpa_supplicant iw git) (recommended)?"; then
+if confirm "Install base packages (recommended)?"; then
     echo -e "\e[32mInstalling some necessary packages\e[0m"
-    sudo pacman -Sy vim base-devel go mlocate wpa_supplicant iw git
+    sudo pacman -Sy vim base-devel go mlocate wpa_supplicant iw git screenfetch
     
     echo -e "\e[32mSetting GOPATH and GOBIN to /go and /go/bin respectively in /etc/environment\e[0m"
     echo 'GOPATH="/go"' | sudo tee -a /etc/environment >> /dev/null
