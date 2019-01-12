@@ -19,7 +19,7 @@ confirm() {
 
 if confirm "Install base packages (recommended)?"; then
     echo -e "\e[32mInstalling some necessary packages\e[0m"
-    sudo pacman -Sy vim base-devel go mlocate wpa_supplicant iw git screenfetch
+    sudo pacman -Sy --needed vim base-devel go mlocate wpa_supplicant iw git screenfetch
     
     echo -e "\e[32mSetting GOPATH and GOBIN to /go and /go/bin respectively in /etc/environment\e[0m"
     echo 'GOPATH="/go"' | sudo tee -a /etc/environment >> /dev/null
@@ -29,9 +29,9 @@ if confirm "Install base packages (recommended)?"; then
     sudo updatedb
 fi
 
-confirm "Install openjdk?" && sudo pacman -Sy jdk-openjdk
-confirm "Install firefox-developer-edition?" && sudo pacman -Sy firefox-developer-edition
-confirm "Install aws-cli?" && sudo pacman -Sy aws-cli
+confirm "Install openjdk?" && sudo pacman -Sy --needed jdk-openjdk
+confirm "Install firefox-developer-edition?" && sudo pacman -Sy --needed firefox-developer-edition
+confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
 
 if confirm "Install yay as AUR helper?"; then
     echo -e "\e[32mInstalling yay as AUR helper\e[0m"
@@ -43,11 +43,11 @@ if confirm "Install yay as AUR helper?"; then
     rm -rf yay
 fi
 
-confirm "Install xorg and xorg-xinit?" && sudo pacman -Sy xorg xorg-xinit
+confirm "Install xorg and xorg-xinit?" && sudo pacman -Sy --needed xorg xorg-xinit
 
 if confirm "Install acpi to view your battery status?"; then
     echo -e "\e[32mInstalling acpi\e[0m"
-    sudo pacman -Sy acpi
+    sudo pacman -Sy --needed acpi
     if confirm "Create alias 'battery' for acpi in your .bashrc?"; then
         echo -e "\e[32mCreating alias 'battery' for acpi\e[0m"
         echo 'alias battery="acpi"' | sudo tee -a ~/.bashrc >> /dev/null
