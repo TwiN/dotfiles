@@ -7,7 +7,6 @@
 # Wifi should be working at this point (see wifi.sh)      #
 ###########################################################
 
-pacman -Sy vim
 mount /dev/nvme0n1p2 /mnt
 rm -rf /mnt/*
 pacstrap /mnt
