@@ -53,3 +53,10 @@ if confirm "Install acpi to view your battery status?"; then
         echo 'alias battery="acpi"' | sudo tee -a ~/.bashrc >> /dev/null
     fi
 fi
+
+########
+# MISC #
+########
+
+# Enable colors for pacman 
+sed -i "s/^#Color/Color/g" /etc/pacman.conf
