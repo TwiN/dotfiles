@@ -41,6 +41,7 @@ if confirm "Install yay as AUR helper?"; then
     cd ..
     echo "> Cleaning up"
     rm -rf yay
+    confirm "Install st as terminal?" && yay -Sy st
 fi
 
 confirm "Install xorg and xorg-xinit?" && sudo pacman -Sy --needed xorg xorg-xinit
