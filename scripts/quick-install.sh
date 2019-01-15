@@ -62,3 +62,7 @@ confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacm
 
 # Enable colors for pacman 
 sed -i "s/^#Color/Color/g" /etc/pacman.conf
+
+# Set the time
+sudo timedatectl set-timezone America/New_York 
+
