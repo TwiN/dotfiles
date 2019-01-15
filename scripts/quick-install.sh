@@ -29,10 +29,6 @@ if confirm "Install base packages (recommended)?"; then
     sudo updatedb
 fi
 
-confirm "Install openjdk?" && sudo pacman -Sy --needed jdk-openjdk
-confirm "Install firefox-developer-edition?" && sudo pacman -Sy --needed firefox-developer-edition
-confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
-
 if confirm "Install yay as AUR helper?"; then
     echo -e "\e[32m> Installing yay as AUR helper\e[0m"
     git clone https://aur.archlinux.org/yay.git
@@ -52,7 +48,11 @@ if confirm "Install acpi to view your battery status?"; then
     fi
 fi
 
+confirm "Install openjdk?" && sudo pacman -Sy --needed jdk-openjdk
+confirm "Install firefox-developer-edition?" && sudo pacman -Sy --needed firefox-developer-edition
+confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
 confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata adobe-source-code-pro-fonts ttf-dejavu terminus-font ttf-freefont
+confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Sy --needed feh
 
 
 ########
