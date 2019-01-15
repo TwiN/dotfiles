@@ -19,7 +19,7 @@ confirm() {
 
 if confirm "Install base packages (recommended)?"; then
     echo -e "\e[32m> Installing some necessary packages\e[0m"
-    sudo pacman -Sy --needed vim base-devel go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode 
+    sudo pacman -Sy --needed vim base-devel go mlocate wpa_supplicant iw iwconfig git wget dialog screenfetch htop rxvt-unicode 
     
     echo -e "\e[32m> Setting GOPATH and GOBIN to /go and /go/bin respectively in /etc/environment\e[0m"
     echo 'GOPATH="/go"' | sudo tee -a /etc/environment >> /dev/null
