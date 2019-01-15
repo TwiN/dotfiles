@@ -1,11 +1,11 @@
 URxvt.background: black
 URxvt.foreground: white
 
-URxvt.font:     terminus-14
-URxvt.boldFont: terminus-14
+URxvt.font:     xft:Inconsolata:size=11
+URxvt.boldFont: xft:Inconsolata:size=11
 URxvt.scrollBar: false
-URxvt.saveLines: 500000
-URxvt.internalBorder: 36 
+URxvt.saveLines: 75000
+URxvt.internalBorder: 8 
 
 Xft.dpi: 128
 
