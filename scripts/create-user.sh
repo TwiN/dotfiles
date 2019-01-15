@@ -10,3 +10,5 @@ fi
 
 echo -e "\e[32m> Adding wheel group to sudoers\e[0m"
 echo "%wheel ALL=(ALL) ALL" | sudo tee -a /etc/sudoers >> /dev/null
+
+passwd twin
