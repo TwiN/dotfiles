@@ -52,6 +52,9 @@ if confirm "Install acpi to view your battery status?"; then
     fi
 fi
 
+confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata adobe-source-code-pro-fonts ttf-dejavu terminus-font ttf-freefont
+
+
 ########
 # MISC #
 ########
