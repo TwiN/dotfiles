@@ -1,8 +1,13 @@
 URxvt.background: black
 URxvt.foreground: white
 
-URxvt.font:     xft:bitstream vera sans mono:size=16:antialias=true
-URxvt.boldFont: xft:bitstream vera sans mono:bold:size=16:antialias=true
+URxvt.font:     terminus-14
+URxvt.boldFont: terminus-14
+URxvt.scrollBar: false
+URxvt.saveLines: 500000
+URxvt.internalBorder: 36 
+
+Xft.dpi: 128
 
 URxvt*color0:  #000000 // black
 URxvt*color1:  #B40000 // red
