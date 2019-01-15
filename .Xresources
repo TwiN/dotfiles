@@ -1,3 +1,6 @@
+URxvt.background: black
+URxvt.foreground: white
+
 URxvt.font:     xft:bitstream vera sans mono:size=16:antialias=true
 URxvt.boldFont: xft:bitstream vera sans mono:bold:size=16:antialias=true
 
