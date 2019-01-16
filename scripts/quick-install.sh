@@ -37,6 +37,7 @@ if confirm "Install yay as AUR helper?"; then
     cd ..
     echo "> Cleaning up"
     rm -rf yay
+    confirm "Install urxvt plugins?" && yay -S urxvt-resize-font-git
 fi
 
 if confirm "Install acpi to view your battery status?"; then
