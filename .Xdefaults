@@ -10,3 +10,14 @@ URxvt*transparent: true
 URxvt*shading: 20
 
 Xft.dpi: 128
+
+! URxvt plugins
+URxvt.perl-ext-common:  default,matcher,resize-font
+
+! Clickable URL
+URxvt.url-launcher: /usr/bin/firefox-developer-edition
+URxvt.matcher.button: 1
+
+! Resize font
+URxvt.keysym.C-Down:  resize-font:smaller
+URxvt.keysym.C-Up:    resize-font:bigger
