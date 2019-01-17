@@ -52,7 +52,7 @@ fi
 confirm "Install openjdk?" && sudo pacman -Sy --needed jdk-openjdk
 confirm "Install firefox-developer-edition?" && sudo pacman -Sy --needed firefox-developer-edition
 confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
-confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata adobe-source-code-pro-fonts ttf-dejavu terminus-font ttf-freefont
+confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata adobe-source-code-pro-fonts ttf-dejavu terminus-font ttf-freefont xorg-xfd
 confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Sy --needed feh
 
 
