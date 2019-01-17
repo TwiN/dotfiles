@@ -1,8 +1,12 @@
 set $mod Mod4
 
+# Gaps
 gaps inner 10
 gaps outer 20
-smart_borders on
+
+# Disable borders
+hide_edge_borders both
+for_window [class=".*"] border pixel 0
 
 # Font for window titles
 font pango:monospace 8
@@ -141,3 +145,9 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+
+exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id feh ~/.config/wallpaper.jpg --bg-center
+
+
