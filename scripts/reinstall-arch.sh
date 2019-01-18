@@ -9,8 +9,8 @@
 
 mount /dev/nvme0n1p2 /mnt
 rm -rf /mnt/*
-pacstrap /mnt
 mount /dev/nvme0n1p1 /mnt/boot
+pacstrap /mnt
 
 # Create a script with the necessary programs to finish the installation
 # This is necessary because 'chroot' opens up a new interactive shell in
