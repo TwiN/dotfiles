@@ -21,7 +21,7 @@ cat << EOF > /mnt/FINISH_INSTALL.sh
 #!/bin/bash
 pacman -Sy --needed vim iw wget git dialog wpa_supplicant
 echo -e "\e[92mIf there's anything else you want to install, install it now. When you're done, type exit and reboot\e[0m"
-rm -- "$0"
+rm /FINISH_INSTALL.sh
 EOF
 
 echo -e "\e[92mPlease run 'chmod +x FINISH_INSTALL.sh' followed by './FINISH_INSTALL.sh'\e[0m"
