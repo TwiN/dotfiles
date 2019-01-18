@@ -7,25 +7,17 @@
 # Wifi should be working at this point (see wifi.sh)      #
 ###########################################################
 
+echo -e "\e[92m> Mounting main partition to /mnt\e[0m"
 mount /dev/nvme0n1p2 /mnt
+
+echo -e "\e[92m> Clearing main partition\e[0m"
 rm -rf /mnt/*
+
+echo -e "\e[92m> Mounting boot partition to /mnt/boot\e[0m"
 mount /dev/nvme0n1p1 /mnt/boot
-pacstrap /mnt
 
-# Create a script with the necessary programs to finish the installation
-# This is necessary because 'chroot' opens up a new interactive shell in
-# the new root, meaning that nothing after the 'arch-chroot /mnt' command
-# would run in that new environment; it would run in the old environment
-# instead
-cat << EOF > /mnt/FINISH_INSTALL.sh
-#!/bin/bash
-echo -e "\e[92mInstalling necessary packages...\e[0m"
-pacman -Sy --needed vim iw wget git dialog wpa_supplicant
-echo -e "\e[92mReinstalling linux kernel into /boot...\e[0m"
-pacman -Syyu linux
-echo -e "\e[92mIf there's anything else you want to install, install it now. When you're done, type exit and reboot\e[0m"
-rm /FINISH_INSTALL.sh
-EOF
+echo -e "\e[92m> Downloading and installing Arch Linux\e[0m"
+pacstrap /mnt base vim iw wget git dialog wpa_supplicant
 
-echo -e "\e[92mPlease run 'chmod +x FINISH_INSTALL.sh' followed by './FINISH_INSTALL.sh'\e[0m"
+echo -e "\e[92m? If there's anything else you want to install, install it now. When you're done, type exit and reboot\e[0m"
 arch-chroot /mnt
