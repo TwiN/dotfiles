@@ -15,4 +15,4 @@ echo -e "\e[32m> Installing dmenu\e[0m"
 sudo pacman -Sy --needed dmenu
 
 echo -e "\e[32m> Installing polybar\e[0m"
-sudo pacman -Sy --needed polybar
+yay -S --needed polybar
