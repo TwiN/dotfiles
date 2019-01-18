@@ -19,5 +19,5 @@ mount /dev/nvme0n1p1 /mnt/boot
 echo -e "\e[92m> Downloading and installing Arch Linux\e[0m"
 pacstrap /mnt base vim iw wget git dialog wpa_supplicant
 
-echo -e "\e[92m? If there's anything else you want to install, install it now. When you're done, type exit and reboot\e[0m"
+echo -e "\e[92m> If there's anything else you want to install, install it now. When you're done, type exit and reboot\e[0m"
 arch-chroot /mnt
