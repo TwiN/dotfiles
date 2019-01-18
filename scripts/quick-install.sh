@@ -18,8 +18,10 @@ confirm() {
 }
 
 if confirm "Install base packages (recommended)?"; then
+    # base-devel needs to be installed separately because it's a package group
     echo -e "\e[32m> Installing base-devel\e[0m"
     sudo pacman -Sy --needed base-devel
+    
     echo -e "\e[32m> Installing some necessary packages\e[0m"
     sudo pacman -Sy --needed vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm
     
