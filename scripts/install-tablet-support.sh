@@ -12,7 +12,7 @@ confirm() {
     esac
 }
 
-if ![ -x "$(command -v yay)" ]; then
+if ! [ -x "$(command -v yay)" ]; then
   echo 'You must install yay to run this script' >&2
   exit 1
 fi
