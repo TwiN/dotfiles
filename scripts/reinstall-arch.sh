@@ -19,7 +19,10 @@ pacstrap /mnt
 # instead
 cat << EOF > /mnt/FINISH_INSTALL.sh
 #!/bin/bash
+echo -e "\e[92mInstalling necessary packages...\e[0m"
 pacman -Sy --needed vim iw wget git dialog wpa_supplicant
+echo -e "\e[92mReinstalling linux kernel into /boot...\e[0m"
+pacman -Syyu linux
 echo -e "\e[92mIf there's anything else you want to install, install it now. When you're done, type exit and reboot\e[0m"
 rm /FINISH_INSTALL.sh
 EOF
