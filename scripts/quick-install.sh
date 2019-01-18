@@ -70,4 +70,4 @@ sed -i "s/^#Color/Color/g" /etc/pacman.conf
 
 # Set the time
 sudo timedatectl set-timezone America/New_York 
-
+sudo hwclock --systohc
