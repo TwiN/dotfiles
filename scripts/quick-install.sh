@@ -42,7 +42,7 @@ if confirm "Install yay as AUR helper?"; then
     echo "> Cleaning up"
     rm -rf yay
     confirm "Install urxvt plugins?" && yay -S urxvt-resize-font-git
-    confirm "Install glyph fonts?" && yay -S siji-git ttf-font-awesome-4
+    confirm "Install glyph fonts?" && yay -S siji-git ttf-font-awesome-4 ttf-material-icons termsyn-font
 fi
 
 if confirm "Install acpi to view your battery status?"; then
