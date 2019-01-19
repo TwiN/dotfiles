@@ -17,4 +17,6 @@ if ! [ -x "$(command -v yay)" ]; then
   exit 1
 fi
 
-confirm "Install screenrotator?" && yay -Sy iio-sensor-proxy-git screenrotator-git
+confirm "Install screenrotator?" && yay -Sy --needed iio-sensor-proxy-git screenrotator-git
+confirm "Install xf86-input-wacom and libwacom?" && sudo pacman -Sy --needed xf86-input-wacom libwacom
+
