@@ -31,7 +31,7 @@ URxvt*shading: 20
 Xft.dpi: 128
 
 ! URxvt plugins
-URxvt.perl-ext-common:  default,matcher,resize-font
+URxvt.perl-ext-common:  default,matcher,resize-font,selection-to-clipboard
 
 ! Clickable URL
 URxvt.url-launcher: /usr/bin/firefox-developer-edition
