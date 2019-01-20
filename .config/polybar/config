@@ -24,8 +24,9 @@ module-margin = 3
 
 font-0 = NotoSans-Regular:size=10;1
 font-1 = FontAwesome:size=10;1
-font-2 = MaterialIcons:size=10;2
-font-3 = Termsynu:size=8:antialias=false;0
+font-2 = Wuncon siji:size=8;1
+font-3 = MaterialIcons:size=10;2
+font-4 = Termsynu:size=8:antialias=false;0
 
 modules-left = powermenu mpd
 modules-center = xwindow
@@ -51,8 +52,9 @@ module-margin-right = 6
 font-0 = NotoSans-Regular:size=8;2
 font-1 = unifont:size=6;-3
 font-2 = FontAwesome:size=8;-2
-font-3 = MaterialIcons:size=10;-1
-font-4 = Termsynu:size=8:antialias=false;0
+font-3 = Wuncon siji:size=8;1
+font-4 = MaterialIcons:size=10;-1
+font-5 = Termsynu:size=8:antialias=false;0
 
 modules-left = i3
 modules-right = temperature cpu memory
@@ -94,6 +96,7 @@ format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 
+; Font used: FontAwesome 4
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = #f53c3c
 ramp-capacity-1 = 
@@ -146,7 +149,9 @@ label-urgent-padding = 2
 type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
-label = CPU
+
+; Font used: Siji
+label = 
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
@@ -189,7 +194,7 @@ bar-used-width = 30
 bar-used-foreground-0 = #aaff77
 bar-used-foreground-1 = #aaff77
 bar-used-foreground-2 = #fba922
-bar-used-foreground-3 = #ff5555
+bar-used-foreground-3 = #ff3333
 bar-used-indicator = |
 bar-used-indicator-font = 6
 bar-used-indicator-foreground = #ff
@@ -204,6 +209,7 @@ bar-used-empty-foreground = #444444
 type = internal/mpd
 format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
 
+; Font used: FontAwesome 4
 icon-play = 
 icon-pause = 
 icon-stop = 
@@ -229,7 +235,7 @@ bar-progress-empty-foreground = #44
 
 
 
-[module/volume]
+[module/volume] 
 type = internal/alsa
 speaker-mixer = Speaker
 headphone-mixer = Headphone
@@ -239,6 +245,7 @@ format-volume = <ramp-volume> <label-volume>
 label-muted =  muted
 label-muted-foreground = #66
 
+; Font used: FontAwesome 4
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -255,15 +262,16 @@ label-connected = %essid%
 label-disconnected =    not connected
 label-disconnected-foreground = #66
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+; Font used: Siji
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 
-animation-packetloss-0 = 
+animation-packetloss-0 = 
 animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 
+animation-packetloss-1 = 
 animation-packetloss-1-foreground = ${bar/top.foreground}
 animation-packetloss-framerate = 500
 
@@ -271,14 +279,21 @@ animation-packetloss-framerate = 500
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 80
 
-format = <label>
-format-warn = <label-warn>
+format = <label> <ramp-signal>
+format-warn = <label-warn> <ramp-signal>
 
-label = TEMP %temperature-c%
-label-warn = TEMP %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = #ff3333
+
+; Font used: FontAwesome 4
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
 
 
 [module/powermenu]
