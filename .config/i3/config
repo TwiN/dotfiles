@@ -130,8 +130,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id compton
 exec --no-startup-id feh ~/.config/wallpaper.jpg --bg-center
 
 
