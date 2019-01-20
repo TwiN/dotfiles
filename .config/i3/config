@@ -8,8 +8,8 @@ gaps inner 10
 gaps outer 20
 
 # Disable borders
-hide_edge_borders both
-for_window [class=".*"] border pixel 0
+hide_edge_borders none
+for_window [class=".*"] border pixel 1
 
 # Font for window titles
 font pango:monospace 8
