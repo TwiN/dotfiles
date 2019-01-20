@@ -17,18 +17,18 @@ foreground = ${colors.foreground}
 
 line-size = 3
 
-spacing = 2
-padding-left = 4
+spacing = 1
+padding-left = 2
 padding-right = 4
-module-margin = 2
+module-margin = 3
 
-font-0 = NotoSans-Regular:size=8;-1
-font-1 = MaterialIcons:size=10;0
-font-2 = Termsynu:size=8:antialias=false;-2
-font-3 = FontAwesome:size=10;0
+font-0 = NotoSans-Regular:size=10;1
+font-1 = FontAwesome:size=10;1
+font-2 = MaterialIcons:size=10;2
+font-3 = Termsynu:size=8:antialias=false;0
 
 modules-left = powermenu mpd
-modules-center = 
+modules-center = xwindow
 modules-right = volume backlight wireless-network battery date
 
 
@@ -48,7 +48,7 @@ padding-right = 4
 module-margin-left = 0
 module-margin-right = 6
 
-font-0 = NotoSans-Regular:size=8;0
+font-0 = NotoSans-Regular:size=8;2
 font-1 = unifont:size=6;-3
 font-2 = FontAwesome:size=8;-2
 font-3 = NotoSans-Regular:size=8;-1
@@ -57,6 +57,11 @@ font-5 = Termsynu:size=8:antialias=false;0
 
 modules-left = i3
 modules-right = temperature cpu memory
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
 
 
 [module/backlight]
