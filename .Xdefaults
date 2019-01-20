@@ -9,6 +9,23 @@ URxvt.internalBorder: 8
 URxvt*transparent: true
 URxvt*shading: 20
 
+URxvt*color0: black
+URxvt*color1: #CD0000
+URxvt*color2: green3
+URxvt*color3: #C4A000
+URxvt*color4: blue2
+URxvt*color5: magenta3
+URxvt*color6: cyan3
+URxvt*color7: gray90
+URxvt*color8: grey50
+URxvt*color9: red
+URxvt*color10: green
+URxvt*color11: yellow
+URxvt*color12: #3465A4
+URxvt*color13: magenta
+URxvt*color14: cyan
+URxvt*color15: white
+
 Xft.dpi: 128
 
 ! URxvt plugins
