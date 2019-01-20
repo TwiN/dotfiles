@@ -39,10 +39,10 @@ if confirm "Install yay as AUR helper?"; then
     cd yay
     makepkg -si
     cd ..
-    echo "> Cleaning up"
+    echo e "\e[32m> Cleaning up\e[0m"
     rm -rf yay
     confirm "Install urxvt plugins?" && yay -S urxvt-resize-font-git
-    confirm "Install glyph fonts?" && yay -S siji-git ttf-font-awesome-4 ttf-material-icons termsyn-font
+    confirm "Install glyph fonts?" && yay -S siji-git ttf-font-awesome ttf-material-icons termsyn-font
 fi
 
 if confirm "Install acpi to view your battery status?"; then
