@@ -25,6 +25,7 @@ module-margin = 3
 font-0 = NotoSans-Regular:size=10;1
 font-1 = FontAwesome 5 Free:style=Solid:size=10;1
 font-2 = FontAwesome 5 Brands:size=10;1
+font-3 = Wuncon siji:size=10;1
 ;font-3 = MaterialIcons:size=10;2
 
 modules-left = powermenu mpd
@@ -51,6 +52,7 @@ module-margin-right = 6
 font-0 = NotoSans-Regular:size=8;2
 font-1 = FontAwesome 5 Free:style=Solid:size=8;-2
 font-2 = FontAwesome 5 Brands:size=8;-2
+font-3 = Wuncon siji:size=8;1
 ;font-4 = MaterialIcons:size=10;-1
 
 modules-left = i3
@@ -93,30 +95,40 @@ format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 
-ramp-capacity-0 = 
+; Font used: Siji
+ramp-capacity-0 = 
 ramp-capacity-0-foreground = #f53c3c
-ramp-capacity-1 = 
-ramp-capacity-1-foreground = #ffa900
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #f53c3c
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = #ffa900
+ramp-capacity-3 = 
+ramp-capacity-3-foreground = #ffa900
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
 
-bar-capacity-width = 10
-bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
-bar-capacity-fill = █
-bar-capacity-fill-foreground = #ddffffff
-bar-capacity-fill-font = 3
-bar-capacity-empty = █
-bar-capacity-empty-font = 3
-bar-capacity-empty-foreground = #44ffffff
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+animation-charging-7 = 
+animation-charging-8 = 
 animation-charging-framerate = 750
 
+;bar-capacity-width = 10
+;bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+;bar-capacity-fill = █
+;bar-capacity-fill-foreground = #ddffffff
+;bar-capacity-fill-font = 3
+;bar-capacity-empty = █
+;bar-capacity-empty-font = 3
+;bar-capacity-empty-foreground = #44ffffff
 
 [module/i3]
 type = internal/i3
