@@ -16,3 +16,6 @@ sudo pacman -Sy --needed dmenu
 
 echo -e "\e[32m> Installing polybar\e[0m"
 yay -S --needed polybar
+
+echo -e "\e[32m> Installing compton\e[0m"
+sudo pacman -Sy --needed compton
