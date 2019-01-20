@@ -48,10 +48,6 @@ fi
 if confirm "Install acpi to view your battery status?"; then
     echo -e "\e[32m> Installing acpi\e[0m"
     sudo pacman -Sy --needed acpi
-    if confirm "Create alias 'battery' for acpi in your .bashrc?"; then
-        echo -e "\e[32m> Creating alias 'battery' for acpi\e[0m"
-        echo 'alias battery="acpi"' | sudo tee -a ~/.bashrc >> /dev/null
-    fi
 fi
 
 confirm "Install openjdk?" && sudo pacman -Sy --needed jdk-openjdk
