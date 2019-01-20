@@ -1,5 +1,8 @@
 set $mod Mod4
 
+# Mouse hover shouldn't affect focus
+focus_follows_mouse no
+
 # Gaps
 gaps inner 10
 gaps outer 20
@@ -130,7 +133,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-exec --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id feh ~/.config/wallpaper.jpg --bg-center
 
 
