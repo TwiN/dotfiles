@@ -70,10 +70,12 @@ type = internal/backlight
 card = intel_backlight
 format = <ramp> <bar>
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+; Font used: FontAwesome 4
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
+; Font used: MaterialIcons/Termsynu
 bar-width = 10
 bar-indicator = |
 bar-indicator-font = 3
@@ -150,9 +152,10 @@ type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
 
-; Font used: Siji
-label = 
+; Font used: FontAwesome 4
+label = 
 
+; Font used: Termsynu
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
 ramp-coreload-0-foreground = #aaff77
@@ -190,6 +193,7 @@ type = internal/memory
 format = <label> <bar-used>
 label = RAM
 
+; Font used: MaterialIcons/Termsynu
 bar-used-width = 30
 bar-used-foreground-0 = #aaff77
 bar-used-foreground-1 = #aaff77
