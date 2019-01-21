@@ -23,7 +23,7 @@ if confirm "Install base packages (recommended)?"; then
     sudo pacman -Sy --needed base-devel
     
     echo -e "\e[32m> Installing some necessary packages\e[0m"
-    sudo pacman -Sy --needed vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm
+    sudo pacman -Sy --needed vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils
 
     echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
     sudo updatedb
