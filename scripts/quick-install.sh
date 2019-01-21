@@ -24,10 +24,6 @@ if confirm "Install base packages (recommended)?"; then
     
     echo -e "\e[32m> Installing some necessary packages\e[0m"
     sudo pacman -Sy --needed vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm
-    
-    echo -e "\e[32m> Setting GOPATH and GOBIN to /go and /go/bin respectively in /etc/environment\e[0m"
-    echo 'GOPATH="/go"' | sudo tee -a /etc/environment >> /dev/null
-    echo 'GOBIN="/go/bin"' | sudo tee -a /etc/environment >> /dev/null
 
     echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
     sudo updatedb
