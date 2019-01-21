@@ -130,6 +130,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
+########
+# Misc #
+########
+
+bindsym XF86MonBrightnessDown exec ~/.config/i3/brightness.sh
+bindsym XF86MonBrightnessUp exec ~/.config/i3/brightness.sh
+
+
+################
+# Run on start #
+################
+
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id compton
 exec --no-startup-id feh ~/.config/wallpaper.jpg --bg-center
