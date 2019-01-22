@@ -47,14 +47,15 @@ It will
 - Mount `/dev/nvme0n1p2` on `/mnt`: In my case, `/dev/nvme0n1p2` is my Linux partition whereas`/dev/nvme0n1p1` 
 is my boot partition. This assumes that your boot partition is working properly.
 - Delete everything in `/mnt`
-- Reinstall Arch Linux on `/mnt` using pacstrap
-- Change the root to `/mnt` so we can install the following packages before rebooting into Arch:
+- Reinstall Arch Linux on `/mnt` using pacstrap and install the following packages:
+    - base
     - vim
     - iw
     - wget
     - git
     - dialog
     - wpa_supplicant
+- Change the root to `/mnt`:
 
 And the script stops here. You can install more packages if you wish, but when you're done, run `exit` and then `reboot`.
 
