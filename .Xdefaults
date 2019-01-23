@@ -9,7 +9,7 @@ URxvt.internalBorder: 8
 URxvt*transparent: true
 URxvt*shading: 20
 
-!! The default colors are "Gruvbox":
+! Colors (Theme: Gruvbox)
 *.color0: #1d2021
 *.color1: #cc241d
 *.color2: #98971a
@@ -26,7 +26,6 @@ URxvt*shading: 20
 *.color13: #d3869b
 *.color14: #8ec07c
 *.color15: #ebdbb2
-
 
 Xft.dpi: 128
 
