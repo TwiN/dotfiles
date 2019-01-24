@@ -1,5 +1,6 @@
 alias ls="ls -A --color=auto -F"
 alias ll="ls -al"
+alias l="ll"
 
 alias battery="acpi"
 alias volume="alsamixer"
