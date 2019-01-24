@@ -7,7 +7,7 @@ URxvt.scrollBar: false
 URxvt.saveLines: 75000
 URxvt.internalBorder: 8 
 URxvt*transparent: true
-URxvt*shading: 20
+URxvt*shading: 12
 
 ! Colors (Theme: Gruvbox)
 *.color0: #1d2021
