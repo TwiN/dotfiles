@@ -58,7 +58,11 @@ confirm "Install ranger?" && sudo pacman -Sy --needed ranger
 ########
 
 # Enable colors for pacman 
-sed -i "s/^#Color/Color/g" /etc/pacman.conf
+sudo sed -i "s/^#Color/Color/g" /etc/pacman.conf
+
+# Enable en_US.UTF-8 locale
+sudo sed -i "s/^#en_US.UTF-8/en_US.UTF-8/g" /etc/locale.gen
+sudo locale-gen
 
 # Set the time
 sudo timedatectl set-timezone America/New_York 
