@@ -54,6 +54,25 @@ confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacm
 confirm "Install ranger?" && sudo pacman -Sy --needed ranger
 
 
+#########################
+# Dotfiles/Config files #
+#########################
+
+if confirm "Copy dotfiles to home directory?"; then
+	cp ../.vimrc ~
+	cp ../.bashrc ~
+	cp ../.Xdefaults ~
+	cp ../.profile ~
+	cp ../.xinitrc ~
+	cp -R ../.vim ~
+	cp -R ../.config ~
+fi
+
+if confirm "Copy etc files and directories to /etc?"; then
+	sudo cp -R ../etc /etc
+fi
+
+
 #######################
 # Sauce Code Pro Font #
 #######################
@@ -80,10 +99,12 @@ fi
 # Vim plugins #
 ###############
 
-echo -e "\e[32m> Installing vim plugins (if necessary)\e[0m"
-vim +'PlugInstall' +qa
-echo -e "\e[32m> Compiling YouCompleteMe\e[0m"
-sudo python ~/.vim/plugged/YouCompleteMe/install.py --go-completer
+if confirm "Install and compile vim plugins?"; then
+	echo -e "\e[32m> Installing vim plugins (if necessary)\e[0m"
+	vim +'PlugInstall' +qa
+	echo -e "\e[32m> Compiling YouCompleteMe\e[0m"
+	sudo python ~/.vim/plugged/YouCompleteMe/install.py --go-completer
+fi
 
 
 ########
