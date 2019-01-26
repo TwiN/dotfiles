@@ -22,8 +22,8 @@ if confirm "Install base packages (recommended)?"; then
     echo -e "\e[32m> Installing base-devel\e[0m"
     sudo pacman -Sy --needed base-devel
     
-    echo -e "\e[32m> Installing some necessary packages\e[0m"
-    sudo pacman -Sy --needed vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip
+    echo -e "\e[32m> Installing necessary packages\e[0m"
+    sudo pacman -Sy --needed python python-pip vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake
 
     echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
     sudo updatedb
@@ -59,7 +59,7 @@ confirm "Install ranger?" && sudo pacman -Sy --needed ranger
 #######################
 
 if confirm "Install Sauce Code Pro font (glyphs and icons)?"; then
-	echo e "\e[32m> Cleaning up\e[0m"
+	echo -e "\e[32m> Creating font directory\e[0m"
 	mkdir -p sauce-code-pro
 	cd sauce-code-pro
 	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/SourceCodePro.zip 
@@ -69,7 +69,9 @@ if confirm "Install Sauce Code Pro font (glyphs and icons)?"; then
 	mkfontscale
 	mkfontdir
 	cd ..
+	echo -e "\e[32m> Moving sauce-code-pro font directory to /usr/share/fonts\e[0m"
 	sudo cp -rf sauce-code-pro /usr/share/fonts/
+	echo -e "\e[32m> Cleaning up\e[0m"
 	rm -rf sauce-code-pro
 fi
 
