@@ -24,10 +24,7 @@ padding-right = 4
 module-margin = 3
 
 font-0 = NotoSans-Regular:size=10;1
-font-1 = FontAwesome:size=10;1
-font-2 = Wuncon siji:size=8;1
-font-3 = MaterialIcons:size=10;2
-font-4 = Termsynu:size=8:antialias=false;0
+font-1 = SauceCodePro Nerd Font Mono:size=13;3
 
 modules-left = powermenu mpd
 modules-center = xwindow
@@ -52,11 +49,7 @@ module-margin-left = 0
 module-margin-right = 6
 
 font-0 = NotoSans-Regular:size=8;2
-font-1 = unifont:size=6;-3
-font-2 = FontAwesome:size=8;2
-font-3 = Wuncon siji:size=8;1
-font-4 = MaterialIcons:size=10;-1
-font-5 = Termsynu:size=8:antialias=false;0
+font-1 = SauceCodePro Nerd Font Mono:size=12;1
 
 modules-left = i3
 modules-right = temperature cpu memory
@@ -72,12 +65,11 @@ type = internal/backlight
 card = intel_backlight
 format = <ramp> <bar>
 
-; Font used: FontAwesome 4
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
 
-; Font used: MaterialIcons/Termsynu
 bar-width = 10
 bar-indicator = |
 bar-indicator-font = 3
@@ -96,25 +88,25 @@ battery = BAT1
 adapter = ADP1
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
+label-charging =   %percentage%%
 
-; Font used: FontAwesome 4
-ramp-capacity-0 = 
+ramp-capacity-0 = 
 ramp-capacity-0-foreground = #f53c3c
-ramp-capacity-1 = 
+ramp-capacity-1 = 
 ramp-capacity-1-foreground = #ffa900
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 750
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = #ffa900
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-10 = 
 
 
 [module/i3]
@@ -123,28 +115,37 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
+ws-icon-default =  
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+
 label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %icon% %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %icon% %name%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%!
+label-urgent = %name%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -154,10 +155,8 @@ type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
 
-; Font used: FontAwesome 4
 label = 
 
-; Font used: Termsynu
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
 ramp-coreload-0-foreground = #aaff77
@@ -186,7 +185,7 @@ ramp-coreload-7-foreground = #ff5555
 
 [module/date]
 type = internal/date
-date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
 date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
 
@@ -215,7 +214,6 @@ bar-used-empty-foreground = #444444
 type = internal/mpd
 format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
 
-; Font used: FontAwesome 4
 icon-play = 
 icon-pause = 
 icon-stop = 
@@ -249,17 +247,20 @@ ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
-label-disconnected =  not connected
+label-disconnected = 睊 not connected
 label-disconnected-foreground = #66
 
-; Font used: Siji
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
+ramp-signal-0 = 直
+ramp-signal-0-foreground = #ffa64c
+ramp-signal-1 = 直
+ramp-signal-1-foreground = #fba922
+ramp-signal-2 = 直
+ramp-signal-3 = 直
+ramp-signal-4 = 直
 
-animation-packetloss-0 = 
+animation-packetloss-0 = !
 animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 
+animation-packetloss-1 = 直 
 animation-packetloss-1-foreground = ${bar/top.foreground}
 animation-packetloss-framerate = 500
 
@@ -267,7 +268,7 @@ animation-packetloss-framerate = 500
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 80
+warn-temperature = 70
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
@@ -276,7 +277,6 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = #ff3333
 
-; Font used: FontAwesome 4
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
@@ -294,7 +294,6 @@ format-volume = <ramp-volume> <label-volume>
 label-muted =  muted
 label-muted-foreground = #66
 
-; Font used: FontAwesome 4
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -305,7 +304,7 @@ type = custom/menu
 
 format-padding = 5
 
-label-open = 
+label-open = ⏻
 label-close = 
 
 menu-0-0 = Terminate WM
@@ -335,7 +334,7 @@ menu-2-1-exec = menu_open-0
 
 [module/clock]
 type = internal/date
-interval = 2
+interval = 1
 date = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
 
 ; vim:ft=dosini

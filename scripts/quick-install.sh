@@ -23,7 +23,7 @@ if confirm "Install base packages (recommended)?"; then
     sudo pacman -Sy --needed base-devel
     
     echo -e "\e[32m> Installing some necessary packages\e[0m"
-    sudo pacman -Sy --needed vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils
+    sudo pacman -Sy --needed vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip
 
     echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
     sudo updatedb
@@ -49,9 +49,29 @@ fi
 confirm "Install openjdk?" && sudo pacman -Sy --needed jdk-openjdk
 confirm "Install firefox-developer-edition?" && sudo pacman -Sy --needed firefox-developer-edition
 confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
-confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata adobe-source-code-pro-fonts ttf-dejavu terminus-font ttf-freefont xorg-xfd
+confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font ttf-freefont xorg-xfd
 confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Sy --needed feh
 confirm "Install ranger?" && sudo pacman -Sy --needed ranger
+
+
+#######################
+# Sauce Code Pro Font #
+#######################
+
+if confirm "Install Sauce Code Pro font (glyphs and icons)?"; then
+	echo e "\e[32m> Cleaning up\e[0m"
+	mkdir -p sauce-code-pro
+	cd sauce-code-pro
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/SourceCodePro.zip 
+	unzip SourceCodePro.zip
+	chmod --recursive 0755 .
+	rm -rf *Windows* SourceCodePro.zip
+	mkfontscale
+	mkfontdir
+	cd ..
+	sudo cp -rf sauce-code-pro /usr/share/fonts/
+	rm -rf sauce-code-pro
+fi
 
 ########
 # MISC #
