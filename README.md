@@ -3,6 +3,17 @@
 Dotfiles (and more) for Archlinux on my Yoga C930
 
 
+## Vim
+
+Once the install script has been ran, you have to run vim, type `:PlugInstall`, and 
+compile YouCompleteMe by doing the following:
+
+```
+cd ~/.vim/plugged/YouCompleteMe
+sudo python install.py --go-completer 
+```
+
+
 ## Boot
 
 Since my installation uses EFI, you have to mount the boot partition first:

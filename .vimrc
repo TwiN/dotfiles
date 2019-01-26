@@ -1,13 +1,21 @@
+if &compatible
+	set nocompatible
+endif
+
 """""""""""
 " Plugins " reminder: Reload .vimrc and run :PlugInstall
 """"""""""" 
 
 call plug#begin('~/.vim/plugged')
+
 Plug 'itchyny/lightline.vim'
+Plug 'Valloric/YouCompleteMe'
+
 call plug#end()
 
+
 " Plugin config
-set laststatus=2
+set laststatus=2                     " lightline
 
 
 """"""""""""
