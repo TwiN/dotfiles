@@ -2,7 +2,7 @@
 # Aliases #
 ###########
 
-alias ls="ls -A --color=auto -F"
+alias ls="ls -hA --color=auto -F"
 alias ll="ls -al"
 alias l="ll"
 
