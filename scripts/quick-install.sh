@@ -75,6 +75,17 @@ if confirm "Install Sauce Code Pro font (glyphs and icons)?"; then
 	rm -rf sauce-code-pro
 fi
 
+
+###############
+# Vim plugins #
+###############
+
+echo -e "\e[32m> Installing vim plugins (if necessary)\e[0m"
+vim +'PlugInstall' +qa
+echo -e "\e[32m> Compiling YouCompleteMe\e[0m"
+sudo python ~/.vim/plugged/YouCompleteMe/install.py --go-completer
+
+
 ########
 # MISC #
 ########
