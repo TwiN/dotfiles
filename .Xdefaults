@@ -4,7 +4,7 @@ URxvt.background: black
 URxvt.foreground: white
 
 URxvt.font:     xft:Inconsolata:size=11,xft:SauceCodePro\ Nerd\ Font\ Mono:size=11
-URxvt.boldFont: xft:Inconsolata:size=11,xft:SauceCodePro\ Nerd\ Font\ Mono:size=11
+URxvt.boldFont: xft:Inconsolata:size=11,xft:SauceCodePro\ Nerd\ Font\ Mono:size=11:style=bold
 URxvt.scrollBar: false
 URxvt.saveLines: 75000
 URxvt.internalBorder: 8 
