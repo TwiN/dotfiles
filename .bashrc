@@ -25,16 +25,14 @@ alias urc="cp ~/.bashrc ~/dotfiles/.bashrc"
 # Fancy shell #
 ###############
 
-
 COLOR_RED="\033[38;5;1m"
 COLOR_ORANGE="\033[38;5;202m"
 COLOR_YELLOW="\033[38;5;11m"
 COLOR_LIGHTYELLOW="\033[38;5;228m"
-COLOR_GREEN="\033[38;5;46m"
+COLOR_GREEN="\033[38;5;10m"
 COLOR_GRAY="\033[38;5;240m"
 COLOR_RESET="\033[0m"
 
-#gitbranch=""
 if [ -f /usr/share/git/completion/git-prompt.sh ]; then
 	source /usr/share/git/completion/git-prompt.sh 
 	gitbranch="$COLOR_GRAY\$(__git_ps1)$COLOR_RESET"
