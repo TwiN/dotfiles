@@ -2,7 +2,7 @@
 
 ###########################################################
 # WARNING: This is not intended to be reused by others!   #
-# This is tailored specifically for the Yoga Y930         #
+# This is tailored specifically for the Yoga C930         #
 # This should be run from a USB key containing arch       #
 # Wifi should be working at this point (see wifi.sh)      #
 ###########################################################
