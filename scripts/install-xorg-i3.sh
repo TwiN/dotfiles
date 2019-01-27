@@ -19,3 +19,7 @@ yay -S --needed polybar
 
 echo -e "\e[32m> Installing compton\e[0m"
 sudo pacman -S --needed compton
+
+# This isn't required, but a few games I occasionally play require it
+echo -e "\e[32m> Installing glu\e[0m"
+sudo pacman -S --needed glu
