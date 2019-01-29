@@ -39,3 +39,22 @@ set shiftwidth=4
 syntax enable      " Enable code syntax 
 set hlsearch       " Highlight search results
 
+
+""""""""""""
+" Mappings "
+""""""""""""
+
+map <left> 		:echoe "use h instead"<CR>
+map <down> 		:echoe "use j instead"<CR>
+map <up> 		:echoe "use k instead"<CR>
+map <right> 	:echoe "use l instead"<CR>
+
+imap <left> 	<nop>
+imap <down> 	<nop>
+imap <up> 		<nop>
+imap <right> 	<nop>
+
+
+
+
+
