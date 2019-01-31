@@ -39,12 +39,14 @@ I use `systemd-boot` rather than `grub2`, and the boot partition should look lik
   vmlinuz-linux
 ```
 
+
 ##### loader.conf
 
 ```
 default arch
 timeout 4
 ```
+
 
 ##### arch.conf
 
@@ -54,5 +56,3 @@ linux /vmlinuz-linux
 initrd /initramfs-linux.img
 options root=PARTUUID=8d118839-7d70-4e13-a9a1-753b844e222d rw acpi_backlight=video
 ```
-
-
