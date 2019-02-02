@@ -8,7 +8,11 @@ if ! [ -x "$(command -v sudo)" ]; then
     pacman -Sy sudo
 fi
 
-echo -e "\e[32m> Adding wheel group to sudoers\e[0m"
-echo "%wheel ALL=(ALL) ALL" | sudo tee -a /etc/sudoers >> /dev/null
-
 passwd twin
+
+echo -e "\e[32m> Type 'sudo visudo' and add/uncomment the following:\e[0m"
+echo "%wheel ALL=(ALL) ALL" 
+
+echo -e "\e[32m> To keep the user's home directory when using sudo, type 'sudo visudo' and add/uncomment the following line:\e[0m"
+echo "Defaults env_keep += \"HOME\""
+
