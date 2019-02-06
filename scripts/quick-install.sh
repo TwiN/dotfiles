@@ -114,10 +114,6 @@ fi
 # Enable colors for pacman 
 sudo sed -i "s/^#Color/Color/g" /etc/pacman.conf
 
-# Make closing lid shutdown instead of suspend (because of s2idle)
-sudo sed -i "s/^#HandleLidSwitch/HandleLidSwitch/g" /etc/systemd/logind.conf
-
-
 # Enable en_US.UTF-8 locale
 sudo sed -i "s/^#en_US.UTF-8/en_US.UTF-8/g" /etc/locale.gen
 sudo locale-gen
