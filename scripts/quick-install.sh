@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e # Exit if any command fails
 
 if [ "$EUID" -eq 0 ]; then
     echo -e "\e[31mDo not execute this as root\e[0m"
