@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e # Exit if any command fails
 
 confirm() {
     read -r -p "${1:-Are you sure?} [y/N] " response
