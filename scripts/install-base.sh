@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e # Exit if any command fails
 
+####################################################################
+# Everything in this script has to be almost the minimum required  #
+# for the configuration to work as intended. Extras should be      #
+# split into different scripts                                     #
+####################################################################
+
 if [ "$EUID" -eq 0 ]; then
     echo -e "\e[31mDo not execute this as root\e[0m"
     exit 1
@@ -53,7 +59,6 @@ confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
 confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font ttf-freefont xorg-xfd
 confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Sy --needed feh
 confirm "Install ranger?" && sudo pacman -Sy --needed ranger
-confirm "Install rtv (Reddit viewer for terminal)?" && sudo pacman -Sy --needed rtv
 
 
 #########################
