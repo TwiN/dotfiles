@@ -24,7 +24,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q kill
 bindsym $mod+Shift+q kill
 
-# start dmenu
+# start application launcher
 bindsym $mod+d exec rofi -show run
 
 # change focus
@@ -100,7 +100,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Workspace-specific config
-for_window [class="Firefox"] move container to workspace $ws3
+assign [class="Firefox"] $ws3
+for_window [class="Firefox"] focus
+for_window [class="(?i)firestorm*"] move container to workspace $ws8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
