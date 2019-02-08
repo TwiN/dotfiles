@@ -13,9 +13,11 @@ lsblk
 ```
 
 ```
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 nvme0n1     259:0    0 238.5G  0 disk 
 |-nvme0n1p1 259:1    0   512M  0 part <--- boot partition
-`-nvme0n1p2 259:2    0   200G  0 part /
+├─nvme0n1p2 259:2    0   200G  0 part /
+└─nvme0n1p3 259:3    0    16G  0 part [SWAP]
 ```
 
 ```bash
@@ -54,5 +56,8 @@ timeout 4
 title Archlinux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options root=PARTUUID=8d118839-7d70-4e13-a9a1-753b844e222d rw acpi_backlight=video
+options root=PARTUUID=8d118839-7d70-4e13-a9a1-753b844e222d rw acpi_backlight=video resume=/dev/nvme0n1p3
 ```
+
+
+**NOTE**: `resume=/dev/nvme0n1p3` is for hibernate support.

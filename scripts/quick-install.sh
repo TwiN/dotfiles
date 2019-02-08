@@ -52,6 +52,7 @@ confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
 confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font ttf-freefont xorg-xfd
 confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Sy --needed feh
 confirm "Install ranger?" && sudo pacman -Sy --needed ranger
+confirm "Install rtv (Reddit viewer for terminal)?" && sudo pacman -Sy --needed rtv
 
 
 #########################
