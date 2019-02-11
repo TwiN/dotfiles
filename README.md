@@ -2,6 +2,8 @@
 
 Dotfiles (and more) for Archlinux on my Yoga C930
 
+Current configuration: i3-gaps, rofi, polybar, urxvt.
+
 
 ## Boot
 
