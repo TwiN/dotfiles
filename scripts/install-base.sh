@@ -8,49 +8,50 @@ set -e # Exit if any command fails
 ####################################################################
 
 if [ "$EUID" -eq 0 ]; then
-    echo -e "\e[31mDo not execute this as root\e[0m"
-    exit 1
+	echo -e "\e[31mDo not execute this as root\e[0m"
+	exit 1
 fi
 
 confirm() {
-    read -r -p "${1:-Are you sure?} [y/N] " response
-    case "$response" in
-        [yY][eE][sS]|[yY]) 
-            true
-            ;;
-        *)
-            false
-            ;;
-    esac
+	read -r -p "${1:-Are you sure?} [y/N] " response
+	case "$response" in
+		[yY][eE][sS]|[yY]) 
+			true
+			;;
+		*)
+			false
+			;;
+	esac
 }
 
 if confirm "Install base packages (recommended)?"; then
-    # base-devel needs to be installed separately because it's a package group
-    echo -e "\e[32m> Installing base-devel\e[0m"
-    sudo pacman -Sy --needed base-devel
-    
-    echo -e "\e[32m> Installing necessary packages\e[0m"
-    sudo pacman -Sy --needed python python-pip vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake
+	# base-devel needs to be installed separately because it's a package group
+	echo -e "\e[32m> Installing base-devel\e[0m"
+	sudo pacman -Sy --needed base-devel
 
-    echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
-    sudo updatedb
+	echo -e "\e[32m> Installing necessary packages\e[0m"
+	sudo pacman -Sy --needed python python-pip vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake
+
+	echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
+	sudo updatedb
 fi
 
 if confirm "Install yay as AUR helper?"; then
-    echo -e "\e[32m> Installing yay as AUR helper\e[0m"
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    makepkg -si
-    cd ..
-    echo e "\e[32m> Cleaning up\e[0m"
-    rm -rf yay
-    confirm "Install urxvt plugins?" && yay -S urxvt-resize-font-git
-    confirm "Install glyph fonts?" && yay -S siji-git ttf-font-awesome-4 ttf-material-icons termsyn-font
+	echo -e "\e[32m> Installing yay as AUR helper\e[0m"
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+	cd ..
+	echo e "\e[32m> Cleaning up\e[0m"
+	rm -rf yay
+	confirm "Install urxvt plugins?" && yay -S urxvt-resize-font-git
+	confirm "Install glyph fonts?" && yay -S siji-git ttf-font-awesome-4 ttf-material-icons termsyn-font
+	confirm "Install kubectl?" && yay -S kubectl-bin
 fi
 
 if confirm "Install acpi to view your battery status?"; then
-    echo -e "\e[32m> Installing acpi\e[0m"
-    sudo pacman -Sy --needed acpi
+	echo -e "\e[32m> Installing acpi\e[0m"
+	sudo pacman -Sy --needed acpi
 fi
 
 confirm "Install openjdk?" && sudo pacman -Sy --needed jdk-openjdk
