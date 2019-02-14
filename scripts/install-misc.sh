@@ -16,3 +16,9 @@ confirm "Install rtv (Reddit viewer for terminal)?" && sudo pacman -Sy --needed 
 confirm "Install lastpass-cli?" && sudo pacman -Sy --needed lastpass-cli
 confirm "Install youtube-dl?" && sudo pacman -Sy --needed youtube-dl
 
+if confirm "Install crunchy2mkv?"; then
+	# install required dependencies
+	sudo pacman -Sy --needed mkvtoolnix-cli youtube-dl
+	sudo pip3 install crunchy2mkv
+fi
+
