@@ -14,5 +14,5 @@ confirm() {
 
 confirm "Install rtv (Reddit viewer for terminal)?" && sudo pacman -Sy --needed rtv
 confirm "Install lastpass-cli?" && sudo pacman -Sy --needed lastpass-cli
-
+confirm "Install youtube-dl?" && sudo pacman -Sy --needed youtube-dl
 
