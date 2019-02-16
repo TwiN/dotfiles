@@ -25,13 +25,14 @@ alias urc="cp ~/.bashrc ~/dotfiles/.bashrc"
 # Fancy shell #
 ###############
 
-COLOR_RED="\033[38;5;1m"
-COLOR_ORANGE="\033[38;5;202m"
-COLOR_YELLOW="\033[38;5;11m"
-COLOR_LIGHTYELLOW="\033[38;5;228m"
-COLOR_GREEN="\033[38;5;10m"
-COLOR_GRAY="\033[38;5;240m"
-COLOR_RESET="\033[0m"
+COLOR_RED="\[$(tput setaf 1)\]"
+COLOR_ORANGE="\[$(tput setaf 202)\]"
+COLOR_YELLOW="\[$(tput setaf 11)\]"
+COLOR_LIGHTYELLOW="\[$(tput setaf 228)\]"
+COLOR_GREEN="\[$(tput setaf 10)\]"
+COLOR_GRAY="\[$(tput setaf 240)\]"
+COLOR_RESET="\[$(tput sgr0)\]"
+FONT_BOLD="\[$(tput bold)\]"
 
 if [ -f /usr/share/git/completion/git-prompt.sh ]; then
 	source /usr/share/git/completion/git-prompt.sh 
@@ -43,6 +44,6 @@ export PS1="[$COLOR_RED\u$COLOR_RESET$COLOR_ORANGE@$COLOR_RESET$COLOR_YELLOW\h$C
 
 ####################################################################
 # Start display server (xorg) if i3 is installed and isn't running #
-####################################################################
+###################################################################
 
 [ "$(tty)" = "/dev/tty1" ] && command -v i3 && ! pgrep -x i3 >/dev/null && exec startx
