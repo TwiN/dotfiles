@@ -61,5 +61,14 @@ initrd /initramfs-linux.img
 options root=PARTUUID=8d118839-7d70-4e13-a9a1-753b844e222d rw acpi_backlight=video resume=/dev/nvme0n1p3
 ```
 
+##### arch-microcode.conf
+
+```
+title Archlinux (load microcode first)
+linux /vmlinuz-linux
+initrd /intel-ucode.img
+initrd /initramfs-linux.img
+options root=PARTUUID=8d118839-7d70-4e13-a9a1-753b844e222d rw acpi_backlight=video resume=/dev/nvme0n1p3
+```
 
 **NOTE**: `resume=/dev/nvme0n1p3` is for hibernate support.

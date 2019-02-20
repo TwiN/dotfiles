@@ -30,7 +30,7 @@ if confirm "Install base packages (recommended)?"; then
 	sudo pacman -Sy --needed base-devel
 
 	echo -e "\e[32m> Installing necessary packages\e[0m"
-	sudo pacman -Sy --needed python python-pip vim go mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake
+	sudo pacman -Sy --needed python python-pip vim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake
 
 	echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
 	sudo updatedb
@@ -60,7 +60,7 @@ confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
 confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font ttf-freefont xorg-xfd
 confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Sy --needed feh
 confirm "Install ranger?" && sudo pacman -Sy --needed ranger
-
+confirm "Install intel-ucode (stability and security updates for the CPU's microcode)?" && sudo pacman -S --needed intel-ucode
 
 #########################
 # Dotfiles/Config files #
