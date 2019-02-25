@@ -22,8 +22,11 @@ nvme0n1     259:0    0 238.5G  0 disk
 └─nvme0n1p3 259:3    0    16G  0 part [SWAP]
 ```
 
+If the boot partition is already mounted, you should see `/boot` as the mountpoint.
+If it isn't mounted, then mount it like so:
+
 ```bash
-sudo mount /dev/nvme0n1p1 /mnt
+sudo mount /dev/nvme0n1p1 /boot
 ```
 
 I use `systemd-boot` rather than `grub2`, and the boot partition should look like this:
@@ -37,6 +40,7 @@ I use `systemd-boot` rather than `grub2`, and the boot partition should look lik
   loader/
       entries/
            arch.conf
+           arch-microcode.conf
       loader.conf
   initramfs-linux-fallback.img
   initramfs-linux.img
