@@ -52,7 +52,7 @@ I use `systemd-boot` rather than `grub2`, and the boot partition should look lik
 
 ```
 default arch
-timeout 4
+timeout 5
 ```
 
 
