@@ -32,6 +32,9 @@ if confirm "Install base packages (recommended)?"; then
 	echo -e "\e[32m> Installing necessary packages\e[0m"
 	sudo pacman -Sy --needed python python-pip vim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake
 
+	echo -e "\e[32m> Installing not-so-neccessary packages\e[0m"
+	sudo pacman -Sy --needed libevent-dev
+
 	echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
 	sudo updatedb
 fi
