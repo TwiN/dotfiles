@@ -11,6 +11,9 @@ alias volume="alsamixer"
 
 alias r="ranger"
 
+alias switch-python2="sudo ln -sf python2 /usr/bin/python"
+alias switch-python3="sudo ln -sf python3 /usr/bin/python"
+
 
 # Configuration shortcuts
 alias ei3="vim ~/.config/i3/config"
