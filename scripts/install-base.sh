@@ -30,7 +30,7 @@ if confirm "Install base packages (recommended)?"; then
 	sudo pacman -Sy --needed base-devel
 
 	echo -e "\e[32m> Installing necessary packages\e[0m"
-	sudo pacman -Sy --needed python python-pip vim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake
+	sudo pacman -Sy --needed python python-pip vim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake lsof
 
 	echo -e "\e[32m> Installing not-so-neccessary packages\e[0m"
 	sudo pacman -Sy --needed libevent-dev
