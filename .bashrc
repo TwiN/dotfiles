@@ -14,7 +14,7 @@ alias switch-python3="sudo ln -sf python3 /usr/bin/python"
 
 alias r="ranger"
 alias yt="youtube-dl -x --audio-format mp3 -o \"%(title)s.%(ext)s\" "
-
+alias k="kubectl"
 
 # Configuration shortcuts
 alias ei3="vim ~/.config/i3/config"
