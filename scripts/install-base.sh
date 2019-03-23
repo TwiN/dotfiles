@@ -64,6 +64,8 @@ confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata tt
 confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Sy --needed feh
 confirm "Install ranger?" && sudo pacman -Sy --needed ranger
 confirm "Install intel-ucode (stability and security updates for the CPU's microcode)?" && sudo pacman -S --needed intel-ucode
+confirm "Install vlc (video player + webcam recorder)?" && sudo pacman -S --needed vlc
+
 
 #########################
 # Dotfiles/Config files #
