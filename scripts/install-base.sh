@@ -30,7 +30,7 @@ if confirm "Install base packages (recommended)?"; then
 	sudo pacman -Sy --needed base-devel
 
 	echo -e "\e[32m> Installing necessary packages\e[0m"
-	sudo pacman -Sy --needed python python-pip vim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake lsof
+	sudo pacman -Sy --needed python python-pip neovim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake lsof
 
 	echo -e "\e[32m> Installing not-so-neccessary packages\e[0m"
 	sudo pacman -Sy --needed libevent-dev
@@ -108,15 +108,19 @@ if confirm "Install Sauce Code Pro font (glyphs and icons)?"; then
 fi
 
 
-###############
-# Vim plugins #
-###############
+##########
+# Neovim #
+##########
+
+if confirm "Create symbolic link 'vim' pointing to 'nvim'?"; then
+	sudo ln -s $(which nvim) /usr/local/bin/vim
+fi
 
 if confirm "Install and compile vim plugins?"; then
 	echo -e "\e[32m> Installing vim plugins (if necessary)\e[0m"
 	vim +'PlugInstall' +qa
-	echo -e "\e[32m> Compiling YouCompleteMe\e[0m"
-	sudo python ~/.vim/plugged/YouCompleteMe/install.py --go-completer
+	#echo -e "\e[32m> Compiling YouCompleteMe\e[0m"
+	#sudo python ~/.vim/plugged/YouCompleteMe/install.py --go-completer
 fi
 
 
