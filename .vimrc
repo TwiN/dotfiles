@@ -12,8 +12,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+endif
 
 call plug#end()
 
@@ -23,8 +27,17 @@ call plug#end()
 " lightline
 set laststatus=2
 
+" vim-go
+let g:go_def_mapping_enabled = 0
+let g:go_fmt_command = "goimports"
+
+
 " deoplete.nvim
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#align_class = 1
+"let g:go_info_mode = "gocode"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 
 """"""""""""
@@ -59,6 +72,8 @@ set noerrorbells
 set noswapfile
 set nobackup
 set noshowmode                      " lightline takes care of this
+
+set completeopt=menu,menuone
 
 if has("persistent_undo")
 	set undofile
