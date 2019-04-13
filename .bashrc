@@ -25,6 +25,9 @@ alias upoly="cp ~/.config/polybar/config ~/dotfiles/.config/polybar/config"
 alias erc="vim ~/.bashrc"
 alias urc="cp ~/.bashrc ~/dotfiles/.bashrc"
 
+# Lazy shortcuts
+alias cdmygo="cd $GOPATH/src/github.com/TwinProduction"
+
 
 ###############
 # Fancy shell #
