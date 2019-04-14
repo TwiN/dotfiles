@@ -5,8 +5,16 @@ Dotfiles (and more) for Archlinux on my Yoga C930
 **Current configuration:** i3-gaps, rofi, polybar, urxvt.
 
 
-## Boot
+##  NeoVim instead of Vim
 
+My love for Vim is nothing new, however, there's always been one thing about Vim that I hated: its codebase.
+
+NeoVim took everything I loved about Vim, extended it, refactored a big part of its codebase, improved
+Vim's performance, and even more. That's why I picked NeoVim over Vim.
+
+
+## Boot
+ 
 Since my installation uses EFI, you have to mount the boot partition first:
 
 
@@ -49,7 +57,7 @@ I use `systemd-boot` rather than `grub2`, and the boot partition should look lik
 
 
 ##### loader.conf
-
+ 
 ```
 default arch
 timeout 10
@@ -65,9 +73,9 @@ initrd /initramfs-linux.img
 options root=PARTUUID=8d118839-7d70-4e13-a9a1-753b844e222d rw acpi_backlight=video resume=/dev/nvme0n1p3
 ```
 
-
+ 
 ##### arch-microcode.conf
-
+ 
 ```
 title Archlinux (load microcode first)
 linux /vmlinuz-linux
