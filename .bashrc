@@ -26,7 +26,7 @@ alias erc="vim ~/.bashrc"
 alias urc="cp ~/.bashrc ~/dotfiles/.bashrc"
 
 # Lazy shortcuts
-alias cdmygo="cd $GOPATH/src/github.com/TwinProduction"
+alias gohome="cd $GOPATH/src/github.com/TwinProduction"
 
 
 ###############
