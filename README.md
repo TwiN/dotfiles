@@ -5,6 +5,12 @@ Dotfiles (and more) for Archlinux on my Yoga C930
 **Current configuration:** i3-gaps, rofi, polybar, urxvt, nvim
 
 
+## Table of contents
+
+- [NeoVim instead of Vim](#neovim-instead-of-vim)
+- [Boot](#boot)
+
+
 ##  NeoVim instead of Vim
 
 My love for Vim is nothing new, however, there's always been one thing about Vim that I hated: its codebase.
