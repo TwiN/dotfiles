@@ -13,6 +13,6 @@ confirm() {
 }
 
 confirm "Install rtv (Reddit viewer for terminal)?" && sudo pacman -Sy --needed rtv
-confirm "Install lastpass-cli?" && sudo pacman -Sy --needed lastpass-cli
+confirm "Install lastpass-cli?" && sudo pacman -S --needed lastpass-cli
 confirm "Install youtube-dl?" && sudo -H pip install --upgrade youtube-dl
-
+confirm "Install virtualbox?" && sudo pacman -S virtualbox
