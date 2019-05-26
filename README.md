@@ -16,13 +16,12 @@ Dotfiles (and more) for Archlinux on my Yoga C930
 My love for Vim is nothing new, however, there's always been one thing about Vim that I hated: its codebase.
 
 NeoVim took everything I loved about Vim, extended it, refactored a big part of its codebase, improved
-Vim's performance, and even more. That's why I picked NeoVim over Vim.
+Vim's performance and even more. That's why I picked NeoVim over Vim.
 
 
 ## Boot
  
 Since my installation uses EFI, you have to mount the boot partition first:
-
 
 ```bash
 lsblk
