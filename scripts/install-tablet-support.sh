@@ -19,6 +19,6 @@ if ! [ -x "$(command -v yay)" ]; then
 fi
 
 confirm "Install iio-sensor-proxy (needed for ~/.config/i3/auto-screen-rotate.sh)?" && yay -Sy --needed iio-sensor-proxy-git
-confirm "Install xf86-input-wacom and libwacom?" && sudo pacman -Sy --needed xf86-input-wacom libwacom
-#confirm "Install onboard (on-screen keyboard)?" && sudo pacman -S --needed onboard
+confirm "Install xf86-input-wacom and libwacom?" && sudo pacman -Syu --needed xf86-input-wacom libwacom
+#confirm "Install onboard (on-screen keyboard)?" && sudo pacman -Syu --needed onboard
 
