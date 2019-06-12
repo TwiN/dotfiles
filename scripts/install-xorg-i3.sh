@@ -6,20 +6,20 @@ if ![ -x "$(command -v yay)" ]; then
 fi
 
 echo -e "\e[32m> Installing xorg and xorg-xinit\e[0m"
-sudo pacman -Sy --needed xorg xorg-xinit
+sudo pacman -Syu --needed xorg xorg-xinit
 
 echo -e "\e[32m> Installing i3-gaps\e[0m"
-sudo pacman -S --needed i3-gaps
+sudo pacman -Syu --needed i3-gaps
 
 echo -e "\e[32m> Installing rofi\e[0m"
-sudo pacman -S --needed rofi
+sudo pacman -Syu --needed rofi
 
 echo -e "\e[32m> Installing polybar\e[0m"
 yay -S --needed polybar
 
 echo -e "\e[32m> Installing compton\e[0m"
-sudo pacman -S --needed compton
+sudo pacman -Syu --needed compton
 
 # This isn't required, but a few games I occasionally play require it
 echo -e "\e[32m> Installing glu\e[0m"
-sudo pacman -S --needed glu
+sudo pacman -Syu --needed glu
