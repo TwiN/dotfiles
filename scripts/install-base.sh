@@ -27,13 +27,13 @@ confirm() {
 if confirm "Install base packages (recommended)?"; then
 	# base-devel needs to be installed separately because it's a package group
 	echo -e "\e[32m> Installing base-devel\e[0m"
-	sudo pacman -Sy --needed base-devel
+	sudo pacman -Syu --needed base-devel
 
 	echo -e "\e[32m> Installing necessary packages\e[0m"
-	sudo pacman -Sy --needed python python-pip neovim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake lsof
+	sudo pacman -Syu --needed python python-pip neovim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake lsof
 
 	echo -e "\e[32m> Installing not-so-neccessary packages\e[0m"
-	sudo pacman -Sy --needed libevent-dev
+	sudo pacman -Syu --needed libevent-dev
 
 	echo -e "\e[32m> Updating mlocate's database (use locate to search for a file)\e[0m"
 	sudo updatedb
@@ -54,17 +54,17 @@ fi
 
 if confirm "Install acpi to view your battery status?"; then
 	echo -e "\e[32m> Installing acpi\e[0m"
-	sudo pacman -Sy --needed acpi
+	sudo pacman -Syu --needed acpi
 fi
 
-confirm "Install openjdk?" && sudo pacman -Sy --needed jdk-openjdk
-confirm "Install firefox-developer-edition?" && sudo pacman -Sy --needed firefox-developer-edition
-confirm "Install aws-cli?" && sudo pacman -Sy --needed aws-cli
-confirm "Install fonts?" && sudo pacman -Sy --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font ttf-freefont xorg-xfd
-confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Sy --needed feh
-confirm "Install ranger?" && sudo pacman -Sy --needed ranger
-confirm "Install intel-ucode (stability and security updates for the CPU's microcode)?" && sudo pacman -S --needed intel-ucode
-confirm "Install vlc (video player + webcam recorder)?" && sudo pacman -S --needed vlc
+confirm "Install openjdk?" && sudo pacman -Syu --needed jdk-openjdk
+confirm "Install firefox-developer-edition?" && sudo pacman -Syu --needed firefox-developer-edition
+confirm "Install aws-cli?" && sudo pacman -Syu --needed aws-cli
+confirm "Install fonts?" && sudo pacman -Syu --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font ttf-freefont xorg-xfd
+confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Syu --needed feh
+confirm "Install ranger?" && sudo pacman -Syu --needed ranger
+confirm "Install intel-ucode (stability and security updates for the CPU's microcode)?" && sudo pacman -Syu --needed intel-ucode
+confirm "Install vlc (video player + webcam recorder)?" && sudo pacman -Syu --needed vlc
 
 
 #########################
