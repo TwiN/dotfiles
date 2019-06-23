@@ -10,3 +10,10 @@ sudo pacman -Syu --needed bluez bluez-utils
 # Bluetooth audio
 sudo pacman -Syu --needed pulseaudio-bluetooth
 
+# Connecting to a bluetooth device:
+#systemctl restart bluetooth
+#bluetoothctl
+#power on
+#scan on
+#connect <DEVICE_ID>
+
