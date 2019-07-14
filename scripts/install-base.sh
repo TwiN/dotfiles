@@ -60,7 +60,7 @@ fi
 confirm "Install openjdk?" && sudo pacman -Syu --needed jdk-openjdk
 confirm "Install firefox-developer-edition?" && sudo pacman -Syu --needed firefox-developer-edition
 confirm "Install aws-cli?" && sudo pacman -Syu --needed aws-cli
-confirm "Install fonts?" && sudo pacman -Syu --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font ttf-freefont xorg-xfd
+confirm "Install fonts?" && sudo pacman -Syu --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font gnu-free-fonts xorg-xfd
 confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Syu --needed feh
 confirm "Install ranger?" && sudo pacman -Syu --needed ranger
 confirm "Install intel-ucode (stability and security updates for the CPU's microcode)?" && sudo pacman -Syu --needed intel-ucode
