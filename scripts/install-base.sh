@@ -30,7 +30,11 @@ if confirm "Install base packages (recommended)?"; then
 	sudo pacman -Syu --needed base-devel
 
 	echo -e "\e[32m> Installing necessary packages\e[0m"
-	sudo pacman -Syu --needed python python-pip neovim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm alsa-utils unzip cmake lsof
+	sudo pacman -Syu --needed python python-pip neovim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm pulseaudio alsa-utils unzip cmake lsof
+
+	# Automatically start pulseaudio
+	echo -e "\e[32m> Enabling pulseaudio on start\e[0m"
+	systemctl --user enable pulseaudio && systemctl --user start pulseaudio
 
 	echo -e "\e[32m> Installing not-so-neccessary packages\e[0m"
 	sudo pacman -Syu --needed libevent-dev
@@ -136,5 +140,5 @@ sudo sed -i "s/^#en_US.UTF-8/en_US.UTF-8/g" /etc/locale.gen
 sudo locale-gen
 
 # Set the time
-sudo timedatectl set-timezone America/New_York 
+sudo timedatectl set-timezone America/New_York
 sudo hwclock --systohc
