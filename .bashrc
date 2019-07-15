@@ -7,7 +7,7 @@ alias ll="ls -al"
 alias l="ll"
 
 alias battery="acpi -i"
-alias volume="alsamixer"
+alias volume="pavucontrol"
 alias current-driver-loaded-by-xorg="sudo lsof +D /usr/lib/xorg/modules/drivers/"
 
 alias switch-python2="sudo ln -sf python2 /usr/bin/python"
@@ -27,7 +27,8 @@ alias urc="cp ~/.bashrc ~/dotfiles/.bashrc"
 
 # Lazy shortcuts
 alias gohome="cd $GOPATH/src/github.com/TwinProduction"
-
+alias connect-bluetooth-speaker="echo -e 'power on\nconnect 00:42:79:AF:85:C9\n' | bluetoothctl"
+alias disconnect-bluetooth-speaker="echo -e 'disconnect 00:42:79:AF:85:C9\npower off\n' | bluetoothctl"
 
 ###############
 # Fancy shell #
