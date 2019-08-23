@@ -100,8 +100,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Workspace-specific config
-assign [class="Firefox"] $ws3
-for_window [class="Firefox"] focus
+assign [class="(?i)firefox*"] $ws3
+for_window [class="(?i)firefox*"] focus
 for_window [class="(?i)firestorm*"] move container to workspace $ws8
 
 # reload the configuration file
