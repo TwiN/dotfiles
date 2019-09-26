@@ -1,4 +1,4 @@
-export EDITOR="vim"
+export EDITOR="nvim"
 
 export LANG="en_US.UTF-8"
 export LC_MONETARY="en_US.UTF-8"
@@ -10,5 +10,7 @@ export LC_ALL="en_US.UTF-8"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:$GOBIN"
+
+export GO111MODULE=on
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
