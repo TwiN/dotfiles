@@ -2,10 +2,20 @@ if &compatible
 	set nocompatible
 endif
 
+""""""""""""""""
+" gVim support "
+""""""""""""""""
+
+if has('gui_running')
+	set guioptions-=T  " no toolbar
+	colorscheme elflord
+endif
+
 
 """""""""""
-" Plugins " reminder: Reload .vimrc and run :PlugInstall
-""""""""""" 
+" Plugins "
+"""""""""""
+" reminder: Reload .vimrc and run :PlugInstall
 
 call plug#begin('~/.vim/plugged')
 
@@ -94,8 +104,3 @@ map <right> 	:echoe "use l instead"<CR>
 "imap <down> 	<nop>
 "imap <up> 		<nop>
 "imap <right> 	<nop>
-
-
-
-
-
