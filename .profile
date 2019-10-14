@@ -13,6 +13,4 @@ export PATH="$PATH:$GOBIN"
 
 export GO111MODULE=on
 
-export MONITOR_DISPLAY_NAME=$(xrandr --listmonitors | awk 'NR==2 {print $4}')
-
 [[ -f ~/.bashrc ]] && . ~/.bashrc
