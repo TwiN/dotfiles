@@ -90,6 +90,9 @@ if has("persistent_undo")
 	set undodir=~/.cache/vim
 endif
 
+" Share clipboard with other vim instances (uses xclip)
+set clipboard+=unnamedplus
+
 
 """"""""""""
 " Mappings "
