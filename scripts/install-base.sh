@@ -81,6 +81,7 @@ if confirm "Copy dotfiles to home directory?"; then
 	cp ../.Xdefaults ~
 	cp ../.profile ~
 	cp ../.xinitrc ~
+	cp ../.gitconfig ~
 	cp -R ../.vim ~
 	cp -R ../.config ~
 fi
