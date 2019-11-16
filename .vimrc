@@ -85,10 +85,11 @@ set noshowmode                      " lightline takes care of this
 
 set completeopt=menu,menuone
 
-if has("persistent_undo")
-	set undofile
-	set undodir=~/.cache/vim
-endif
+" Remember undo history after file write
+"if has("persistent_undo")
+"	set undofile
+"	set undodir=~/.cache/vim
+"endif
 
 " Share clipboard with other vim instances (uses xclip)
 set clipboard+=unnamedplus
