@@ -1,6 +1,7 @@
 [global]
-#monitor = eDP1
 monitor = ${env:MONITOR:eDP1}
+network-adapter = wlp107s0 
+
 
 [colors]
 background = #aa222222
@@ -32,7 +33,7 @@ font-1 = SauceCodePro Nerd Font Mono:size=13;3
 
 modules-left = powermenu mpd
 modules-center = xwindow
-modules-right = volume backlight wireless-network battery date
+modules-right = volume backlight networkspeedup networkspeeddown wireless-network battery date
 
 
 [bar/bottom]
@@ -218,7 +219,7 @@ bar-used-empty-foreground = #444444
 
 [module/wireless-network]
 type = internal/network
-interface = wlp107s0
+interface = ${global.network-adapter}
 interval = 3.0
 ping-interval = 10
 
@@ -240,6 +241,22 @@ animation-packetloss-0-foreground = #ffa64c
 animation-packetloss-1 = 直 
 animation-packetloss-1-foreground = ${bar/top.foreground}
 animation-packetloss-framerate = 500
+
+
+[module/networkspeedup]
+type = internal/network
+interface = ${global.network-adapter}
+label-connected = %upspeed:7%
+format-connected = <label-connected>
+format-connected-prefix = ""
+
+
+[module/networkspeeddown]
+type = internal/network
+interface = ${global.network-adapter}
+label-connected = %downspeed:7%
+format-connected = <label-connected>
+format-connected-prefix = ""
 
 
 [module/temperature]
