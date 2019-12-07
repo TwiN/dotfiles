@@ -13,7 +13,7 @@ Dotfiles (and more) for Archlinux on my Yoga C930
 
 ##  NeoVim instead of Vim
 
-My love for Vim is nothing new, however, there's always been one thing about Vim that I hated: its codebase.
+My love for Vim is nothing new, however, there's always been one thing about Vim that I hated: its source code.
 
 NeoVim took everything I loved about Vim, extended it, refactored a big part of its codebase, improved
 Vim's performance and even more. That's why I picked NeoVim over Vim.
