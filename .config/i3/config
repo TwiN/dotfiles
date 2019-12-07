@@ -203,6 +203,5 @@ exec --no-startup-id compton
 exec --no-startup-id feh ~/.config/wallpaper.jpg --bg-center
 
 # Auto rotate
-exec_always --no-startup-id ~/.config/i3/auto-screen-rotate.sh eDP1
-
+exec_always --no-startup-id ~/.config/i3/auto-screen-rotate.sh
 

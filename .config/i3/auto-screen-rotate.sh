@@ -1,16 +1,18 @@
 #!/bin/sh
 
 # Automatically rotate the screen when the device's orientation changes.
-# Use 'xrandr' to get the correct display for the first argument (for example, "eDP-1"),
 # and 'xinput' to get the correct input element for your touch screen, if applicable
 # (for example,  "Wacom HID 486A Finger").
 #
 # The script depends on the monitor-sensor program from the iio-sensor-proxy package.
 
-if [ -z "$1" ]; then
-	echo "Usage: $0 <display> [touchinput]"
-	exit 1
-fi
+# You can your monitor from xrandr
+monitor="eDP1"
+
+# You can get your touch inputs from xinput
+finger="Wacom HID 5196 Finger" 
+pen="Wacom HID 5196 Pen Pen (0xad4c1350)"
+eraser="Wacom HID 5196 Pen Eraser (0xad4c1350)"
 
 monitor-sensor \
 	| grep --line-buffered "Accelerometer orientation changed" \
@@ -34,9 +36,11 @@ monitor-sensor \
 			continue
 		fi
 
-		xrandr --output "$1" --rotate "$rotate"
-		if ! [ -z "$2" ]; then
-			xinput set-prop "$2" --type=float "Coordinate Transformation Matrix" $matrix
-		fi
+		# Set monitor orientation
+		xrandr --output "$monitor" --rotate "$rotate"
+		# Set touch input orientation
+		xinput set-prop "$finger" --type=float "Coordinate Transformation Matrix" $matrix
+		xinput set-prop "$pen"    --type=float "Coordinate Transformation Matrix" $matrix
+		xinput set-prop "$eraser" --type=float "Coordinate Transformation Matrix" $matrix
 	done
 	
