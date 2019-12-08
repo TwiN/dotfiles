@@ -17,8 +17,8 @@ sudo pacman -Syu --needed rofi
 echo -e "\e[32m> Installing polybar\e[0m"
 yay -S --needed polybar
 
-echo -e "\e[32m> Installing compton\e[0m"
-sudo pacman -Syu --needed compton
+echo -e "\e[32m> Installing picom (compton)\e[0m"
+sudo pacman -Syu --needed picom
 
 # This isn't required, but a few games I occasionally play require it
 echo -e "\e[32m> Installing glu\e[0m"

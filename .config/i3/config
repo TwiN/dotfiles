@@ -199,7 +199,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle
 ################
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id compton
+exec --no-startup-id picom
 exec --no-startup-id feh ~/.config/wallpaper.jpg --bg-center
 
 # Auto rotate
