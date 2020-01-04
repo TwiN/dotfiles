@@ -43,6 +43,11 @@ if confirm "Install base packages (recommended)?"; then
 	sudo updatedb
 fi
 
+if confirm "Install docker?"; then
+	sudo pacman -Syu --needed docker
+	sudo systemctl enable docker.service
+fi
+
 if confirm "Install yay as AUR helper?"; then
 	echo -e "\e[32m> Installing yay as AUR helper\e[0m"
 	git clone https://aur.archlinux.org/yay.git
