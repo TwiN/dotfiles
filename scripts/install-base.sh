@@ -30,7 +30,7 @@ if confirm "Install base packages (recommended)?"; then
 	sudo pacman -Syu --needed base-devel
 
 	echo -e "\e[32m> Installing necessary packages\e[0m"
-	sudo pacman -Syu --needed python python-pip neovim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm pulseaudio alsa-utils unzip cmake lsof xclip
+	sudo pacman -Syu --needed python python-pip neovim go dep mlocate wpa_supplicant iw git wget dialog screenfetch htop rxvt-unicode xterm pulseaudio alsa-utils unzip cmake lsof xclip ruby
 
 	# Automatically start pulseaudio
 	echo -e "\e[32m> Enabling pulseaudio on start\e[0m"

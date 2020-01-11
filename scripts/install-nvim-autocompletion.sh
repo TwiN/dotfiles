@@ -5,4 +5,5 @@ set -e
 
 echo "Installing gocode for Deoplete Go completion"
 go get -u github.com/stamblerre/gocode
+gem install neovim
 
