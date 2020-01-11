@@ -24,6 +24,8 @@ alias epoly="vim ~/.config/polybar/config"
 alias upoly="cp ~/.config/polybar/config ~/dotfiles/.config/polybar/config"
 alias erc="vim ~/.bashrc"
 alias urc="cp ~/.bashrc ~/dotfiles/.bashrc"
+alias eprofile="vim ~/.profile"
+alias uprofile="cp ~/.profile ~/dotfiles/.profile"
 
 # Lazy shortcuts
 alias gohome="cd $GOPATH/src/github.com/TwinProduction"
@@ -52,15 +54,8 @@ fi
 export PS1="[$COLOR_RED\u$COLOR_RESET$COLOR_ORANGE@$COLOR_RESET$COLOR_YELLOW\h$COLOR_RESET $COLOR_LIGHTYELLOW\w$COLOR_RESET]$gitbranch $COLOR_GREEN\$$COLOR_RESET "
 
 
-########
-# MISC #
-########
-
-export HISTCONTROL=ignoredups
-
-
 ####################################################################
 # Start display server (xorg) if i3 is installed and isn't running #
-###################################################################
+####################################################################
 
 [ "$(tty)" = "/dev/tty1" ] && command -v i3 && ! pgrep -x i3 >/dev/null && exec startx

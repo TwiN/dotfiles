@@ -15,6 +15,12 @@ endif
 """""""""""
 " Plugins "
 """""""""""
+
+"=========== INFO ==========="
+" Plugin manager: Plug       "
+" Autocompletion: Deoplete   "
+"============================"
+
 " reminder: Reload .vimrc and run :PlugInstall
 
 call plug#begin('~/.vim/plugged')
@@ -28,6 +34,10 @@ if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 endif
+
+" Terraform
+Plug 'hashivim/vim-terraform'
+Plug 'juliosueiras/vim-terraform-completion'
 
 call plug#end()
 
@@ -46,9 +56,17 @@ let g:go_fmt_command = "goimports"
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#align_class = 1
-"let g:go_info_mode = "gocode"
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
+call deoplete#custom#option('omni_patterns', {
+\ 'complete_method': 'omnifunc',
+\ 'terraform': '[^ *\t"{=$]\w*',
+\})
+
+
+""""""""""""""""""
+" END OF PLUGINS "
+""""""""""""""""""
 
 """"""""""""
 " Autocmds "
