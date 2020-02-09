@@ -33,6 +33,7 @@ alias connect-bluetooth-speaker="echo -e 'power on\nconnect 00:42:79:AF:85:C9\n'
 alias disconnect-bluetooth-speaker="echo -e 'disconnect 00:42:79:AF:85:C9\npower off\n' | bluetoothctl"
 alias mirror-screen="xrandr --output DP2 --same-as eDP1 --mode 1600x900"
 
+
 ###############
 # Fancy shell #
 ###############
