@@ -6,6 +6,9 @@ alias ls="ls -hA --color=auto -F"
 alias ll="ls -al"
 alias l="ll"
 
+alias ..="cd .."
+alias ~="cd ~"
+
 alias battery="acpi -i"
 alias volume="pavucontrol"
 alias current-driver-loaded-by-xorg="sudo lsof +D /usr/lib/xorg/modules/drivers/"
