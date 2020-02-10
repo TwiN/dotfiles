@@ -148,4 +148,4 @@ sudo locale-gen
 
 # Set the time
 sudo timedatectl set-timezone America/New_York
-sudo hwclock --systohc
+sudo hwclock --hctosys
