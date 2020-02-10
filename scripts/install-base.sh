@@ -148,4 +148,5 @@ sudo locale-gen
 
 # Set the time
 sudo timedatectl set-timezone America/New_York
+# Use date/time set on BIOS
 sudo hwclock --hctosys
