@@ -19,4 +19,4 @@ if [[ $(ruby -e 'puts Gem.user_dir') == *'.gem'* ]]; then
 	export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 fi
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/.bashrc ]] && source ~/.bashrc

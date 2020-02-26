@@ -1,0 +1,36 @@
+alias ls="ls -hA --color=auto -F"
+alias ll="ls -al"
+alias l="ll"
+
+alias ..="cd .."
+alias ~="cd ~"
+alias c="clear"
+
+alias battery="acpi -i"
+alias volume="pavucontrol"
+alias current-driver-loaded-by-xorg="sudo lsof +D /usr/lib/xorg/modules/drivers/"
+
+alias switch-python2="sudo ln -sf python2 /usr/bin/python"
+alias switch-python3="sudo ln -sf python3 /usr/bin/python"
+
+alias r="ranger"
+alias yt="youtube-dl -x --audio-format mp3 -o \"%(title)s.%(ext)s\" "
+alias k="kubectl"
+
+# Configuration shortcuts
+alias ei3="vim ~/.config/i3/config"
+alias ui3="cp ~/.config/i3/config ~/dotfiles/.config/i3/config"
+alias epoly="vim ~/.config/polybar/config"
+alias upoly="cp ~/.config/polybar/config ~/dotfiles/.config/polybar/config"
+alias erc="vim ~/.bashrc"
+alias urc="cp ~/.bashrc ~/dotfiles/.bashrc"
+alias ealiases="vim ~/.aliases"
+alias ualiases="cp ~/.aliases ~/dotfiles/.aliases"
+alias eprofile="vim ~/.profile"
+alias uprofile="cp ~/.profile ~/dotfiles/.profile"
+
+# Lazy shortcuts
+alias gohome="cd $GOPATH/src/github.com/TwinProduction"
+alias connect-bluetooth-speaker="echo -e 'power on\nconnect 00:42:79:AF:85:C9\n' | bluetoothctl"
+alias disconnect-bluetooth-speaker="echo -e 'disconnect 00:42:79:AF:85:C9\npower off\n' | bluetoothctl"
+alias mirror-screen="xrandr --output DP2 --same-as eDP1 --mode 1600x900"
