@@ -21,7 +21,9 @@ endif
 " Autocompletion: Deoplete   "
 "============================"
 
-" reminder: Reload .vimrc and run :PlugInstall
+" reminder: Adding one or more plugins require 
+" re-opening .vimrc and executing :PlugInstall
+" You can update the plugins with :PlugUpdate
 
 call plug#begin('~/.vim/plugged')
 
@@ -61,6 +63,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 call deoplete#custom#option('omni_patterns', {
 \ 'complete_method': 'omnifunc',
 \ 'terraform': '[^ *\t"{=$]\w*',
+\ 'go': '[^. *\t]\.\w*',
 \})
 
 
