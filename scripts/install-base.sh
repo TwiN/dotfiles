@@ -84,6 +84,7 @@ confirm "Install vlc (video player + webcam recorder)?" && sudo pacman -Syu --ne
 if confirm "Copy dotfiles to home directory?"; then
 	cp ../.vimrc ~
 	cp ../.bashrc ~
+	cp ../.aliases ~
 	cp ../.Xdefaults ~
 	cp ../.profile ~
 	cp ../.xinitrc ~
