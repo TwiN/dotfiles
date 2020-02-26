@@ -1,11 +1,13 @@
 set $mod Mod4
+set $default_inner_gaps 3
+set $default_outer_gaps 6
 
 # Mouse hover shouldn't affect focus
 focus_follows_mouse no
 
 # Gaps
-gaps inner 10
-gaps outer 20
+gaps inner $default_inner_gaps
+gaps outer $default_outer_gaps
 
 # Disable borders
 hide_edge_borders none
@@ -140,8 +142,11 @@ mode "resize" {
 # Gaps mode #
 #############
 
-bindsym $mod+g         gaps inner all set 10; gaps outer all set 20
-bindsym $mod+Shift+g   gaps inner all set 0; gaps outer all set 0
+# Reset gaps to default
+bindsym $mod+g        gaps inner all set $default_inner_gaps; gaps outer all set $default_outer_gaps
+
+# Remove all gaps
+bindsym $mod+Shift+g  gaps inner all set 0; gaps outer all set 0
 
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (current), Shift + +|-|0 (all)
