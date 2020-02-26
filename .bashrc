@@ -8,6 +8,7 @@ alias l="ll"
 
 alias ..="cd .."
 alias ~="cd ~"
+alias c="clear"
 
 alias battery="acpi -i"
 alias volume="pavucontrol"
