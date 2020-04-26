@@ -8,6 +8,6 @@
 #############################################################################
 
 sleep 1;
-cat /sys/class/backlight/intel_backlight/brightness
+cat /sys/class/backlight/intel_backlight/brightness /sys/class/backlight/intel_backlight/actual_brightness
 
 
