@@ -72,7 +72,6 @@ confirm "Install firefox-developer-edition?" && sudo pacman -Syu --needed firefo
 confirm "Install aws-cli?" && sudo pacman -Syu --needed aws-cli
 confirm "Install fonts?" && sudo pacman -Syu --needed ttf-hack ttf-inconsolata ttf-dejavu terminus-font gnu-free-fonts xorg-xfd
 confirm "Install feh (Image viewer and desktop wallpaper manager)?" && sudo pacman -Syu --needed feh
-confirm "Install ranger?" && sudo pacman -Syu --needed ranger
 confirm "Install intel-ucode (stability and security updates for the CPU's microcode)?" && sudo pacman -Syu --needed intel-ucode
 confirm "Install vlc (video player + webcam recorder)?" && sudo pacman -Syu --needed vlc
 
