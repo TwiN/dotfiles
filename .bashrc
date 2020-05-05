@@ -1,3 +1,7 @@
+if type "dyr" > /dev/null; then 
+	dyr get --random
+fi
+
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 ###############
