@@ -16,4 +16,4 @@ confirm "Install rtv (Reddit viewer for terminal)?" && sudo pacman -Syu --needed
 confirm "Install lastpass-cli?" && sudo pacman -Syu --needed lastpass-cli
 confirm "Install youtube-dl?" && sudo -H pip install --upgrade youtube-dl
 confirm "Install virtualbox?" && sudo pacman -Syu --needed virtualbox
-confirm "Install gnome-characters?" && sudo pacman -Syu --needed gnome-characters
+confirm "Install kcharselect (character map)?" && sudo pacman -Syu --needed kcharselect
