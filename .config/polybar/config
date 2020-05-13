@@ -220,7 +220,7 @@ bar-used-empty-foreground = #444444
 [module/wireless-network]
 type = internal/network
 interface = ${global.network-adapter}
-interval = 3.0
+interval = 10.0
 ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>

@@ -104,7 +104,14 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Workspace-specific config
 assign [class="(?i)firefox*"] $ws3
 for_window [class="(?i)firefox*"] focus
+
 for_window [class="(?i)firestorm*"] move container to workspace $ws8
+
+assign [class="(?i)discord*"] $ws7
+for_window [class="(?i)discord*"] focus
+
+assign [class="(?i)slack*"] $ws7
+for_window [class="(?i)slack*"] focus
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
