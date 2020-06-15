@@ -4,6 +4,9 @@ fi
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
 ###############
 # Fancy shell #
 ###############
