@@ -90,3 +90,9 @@ options root=PARTUUID=8d118839-7d70-4e13-a9a1-753b844e222d rw acpi_backlight=vid
 ```
 
 **NOTE**: `resume=/dev/nvme0n1p3` is for hibernate support.
+
+
+## Useful links
+
+- (C930) https://forums.lenovo.com/t5/Ubuntu/Linux-compatibility-with-Yoga-C930/m-p/4267325
+- (C940) https://wiki.archlinux.org/index.php/Lenovo_Yoga_c940
