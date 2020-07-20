@@ -5,8 +5,8 @@ if [[ -t 1 ]]; then
     if type "dyr" > /dev/null; then 
         dyr get --random
     fi
-	bind 'set show-all-if-ambiguous on'
-	bind 'TAB:menu-complete'
+    bind 'set show-all-if-ambiguous on'
+    bind 'TAB:menu-complete'
 fi
 
 
@@ -36,4 +36,3 @@ export PS1="[$COLOR_RED\u$COLOR_RESET$COLOR_ORANGE@$COLOR_RESET$COLOR_YELLOW\h$C
 ####################################################################
 
 [ "$(tty)" = "/dev/tty1" ] && command -v i3 && ! pgrep -x i3 >/dev/null && exec startx
-
