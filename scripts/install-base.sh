@@ -56,10 +56,11 @@ if confirm "Install yay as AUR helper?"; then
 	cd ..
 	echo e "\e[32m> Cleaning up\e[0m"
 	rm -rf yay
-	confirm "Install urxvt plugins?" && yay -S --needed urxvt-resize-font-git
+	confirm "Install urxvt plugins?" && yay -Sy --needed urxvt-resize-font-git
 	confirm "Install glyph fonts?" && yay -S --needed siji-git ttf-font-awesome-4 ttf-material-icons termsyn-font
 	confirm "Install kubectl?" && yay -S --needed kubectl-bin
 	confirm "Install doctl-bin?" && yay -S --needed doctl-bin
+	confirm "Install gscreenshot?" && yay -S --needed gscreenshot
 fi
 
 if confirm "Install acpi to view your battery status?"; then
