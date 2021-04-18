@@ -1,5 +1,7 @@
 # dotfiles
 
+**NOTE**: I've recently switched to Manjaro instead of Arch.
+
 Dotfiles (and more) for Archlinux on my Yoga C930
 
 **Current configuration:** i3-gaps, rofi, polybar, urxvt, nvim
