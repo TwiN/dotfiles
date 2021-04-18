@@ -2,9 +2,6 @@
 
 # Execute the following block only if the session is interactive 
 if [[ -t 1 ]]; then
-    if type "dyr" > /dev/null; then 
-        dyr get --random
-    fi
     bind 'set show-all-if-ambiguous on'
     bind 'TAB:menu-complete'
 fi
@@ -30,9 +27,4 @@ fi
 
 export PS1="[$COLOR_RED\u$COLOR_RESET$COLOR_ORANGE@$COLOR_RESET$COLOR_YELLOW\h$COLOR_RESET $COLOR_LIGHTYELLOW\w$COLOR_RESET]$gitbranch $COLOR_GREEN\$$COLOR_RESET "
 
-
-####################################################################
-# Start display server (xorg) if i3 is installed and isn't running #
-####################################################################
-
-[ "$(tty)" = "/dev/tty1" ] && command -v i3 && ! pgrep -x i3 >/dev/null && exec startx
+xset r rate 250 25
